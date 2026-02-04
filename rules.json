@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "X-Real-IP", "operation": "set", "value": "211.161.244.70" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "music.163.com",
+      "resourceTypes": ["main_frame", "sub_frame", "xmlhttprequest", "ping", "script", "image", "stylesheet", "object", "media", "websocket", "other"]
+    }
+  }
+]

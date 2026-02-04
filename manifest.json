@@ -1,8 +1,7 @@
 {
-  "background": {
-    "scripts": [ "background.js" ],
-    "persistent": true
-  },
+  "manifest_version": 3,
+  "name": "__MSG_appName__",
+  "version": "1.0.0",
   "default_locale": "en",
   "description": "__MSG_description__",
   "icons": {
@@ -10,9 +9,20 @@
     "48": "img/logo48.png",
     "128": "img/logo128.png"
   },
-  "manifest_version": 2,
-  "permissions": [ "notifications", "*://music.163.com/", "activeTab", "contextMenus", "storage",  "webRequest", "webRequestBlocking" ],
-  "name": "__MSG_appName__",
-  "author": "acgotaku",
-  "version": "0.0.2"
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "*://*.music.163.com/*",
+    "*://music.163.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
 }
